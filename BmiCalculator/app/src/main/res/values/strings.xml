@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BmiCalculator</string>
+    <string name="result">결과</string>
+    <string name="textview">TextView</string>
+    <string name="todo">TODO</string>
+    <string name="weight">몸무게</string>
+    <string name="height">키</string>
+    <string name="resultView">결과가 표시되는 곳</string>
+</resources>
