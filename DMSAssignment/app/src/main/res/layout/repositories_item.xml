@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/owner_profile_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="3dp"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        <TextView
+            android:id="@+id/owner_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_toEndOf="@id/owner_profile_image"
+            android:gravity="center"
+
+            android:padding="3dp"
+            android:text="이름"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/repositories_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/owner_profile_image"
+            android:padding="3dp"
+            android:text="레포 이름"
+
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/repositories_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/repositories_name"
+            android:padding="3dp"
+
+            android:text="레포 설명"
+            android:textSize="25sp"
+
+            />
+
+        <TextView
+            android:id="@+id/repositories_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/repositories_description"
+            android:layout_alignParentStart="true"
+
+            android:padding="3dp"
+
+            android:text="언어"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/repositories_stargazers_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/repositories_description"
+            android:layout_alignParentEnd="true"
+
+            android:padding="3dp"
+            android:text="0"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/repositories_description"
+            android:layout_toLeftOf="@id/repositories_stargazers_count"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

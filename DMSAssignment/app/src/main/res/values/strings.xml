@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DMSAssignment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="dialog_confirm_username">이 유저네임이 맞습니까?</string>
+
+    <string name="dialog_yes">예</string>
+    <string name="dialog_no">아니오</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
