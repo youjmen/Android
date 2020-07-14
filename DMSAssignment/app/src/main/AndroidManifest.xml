@@ -11,14 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.WebViewActivity"></activity>
-        <activity android:name=".view.FollowingActivity" />
-        <activity android:name=".view.FollowersActivity" />
-        <activity android:name=".view.StarsActivity" />
-        <activity android:name=".view.RepositoryActivity" />
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".view.UserActivity" />
-        <activity android:name=".view.MainActivity">
+        <activity android:name=".view.Activity.WebViewActivity"></activity>
+        <activity android:name=".view.Activity.FollowingActivity" />
+        <activity android:name=".view.Activity.FollowersActivity" />
+        <activity android:name=".view.Activity.StarsActivity" />
+        <activity android:name=".view.Activity.RepositoryActivity" />
+        <activity android:name=".view.Activity.UserActivity" />
+        <activity android:name=".view.Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

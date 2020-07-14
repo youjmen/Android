@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.Fragment.UserFragment"
+    android:background="#ffffff"
+>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_bio"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/text_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_email"
+            android:layout_toRightOf="@id/text_location"
+            android:padding="5dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+
+
+            />
+
+        <TextView
+            android:id="@+id/text_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_email"
+            android:padding="5dp"
+
+            android:textSize="15sp"
+            android:textStyle="bold"
+
+
+            />
+
+        <TextView
+            android:id="@+id/text_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_blog"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+
+            />
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/text_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/profile_image"
+            android:padding="10dp"
+            android:text="name"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_id"
+            android:layout_toRightOf="@+id/profile_image"
+            android:padding="10dp"
+            android:text="TextView"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_blog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_image"
+            android:padding="10dp"
+            android:text="TextView"
+            android:textColor="#000000"
+            android:textSize="20sp"
+
+            />
+
+        <TextView
+            android:id="@+id/text_followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_location"
+            android:padding="10dp"
+            android:text="followers"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_location"
+            android:layout_toRightOf="@+id/text_followers"
+            android:padding="10dp"
+            android:text="following"
+            android:textColor="#000000"
+
+
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_repositories_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_following"
+            android:padding="10dp"
+            android:text="Repositories"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_stars_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_repositories_list"
+            android:padding="10dp"
+            android:text="Stars"
+            android:textColor="#000000"
+
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_followers_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_stars_list"
+            android:padding="10dp"
+            android:text="Followers"
+            android:textColor="#000000"
+
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_following_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_followers_list"
+            android:padding="10dp"
+            android:text="Following"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/repositories_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_following"
+            android:layout_toRightOf="@id/text_following"
+
+            android:padding="10dp"
+
+            android:text="TextView"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/followers_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_stars_list"
+
+            android:layout_toRightOf="@id/text_following"
+            android:padding="10dp"
+
+            android:text="TextView"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/following_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_followers_list"
+
+            android:layout_toEndOf="@id/text_following"
+            android:padding="10dp"
+            android:text="TextView"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/change_username_button"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="유저 이름 변경"
+        android:background="#ffffff"
+        android:textColor="#000000"
+
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
