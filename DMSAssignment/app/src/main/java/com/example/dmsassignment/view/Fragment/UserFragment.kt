@@ -22,16 +22,11 @@ import retrofit2.Response
 
 class UserFragment : Fragment() {
 
-    companion object{
-        fun newInstance(): Fragment {
-            return UserFragment()
-        }
-    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view= inflater.inflate(R.layout.fragment_user, container, false)
         val username = UtilClass.getId(requireActivity().applicationContext)
 
@@ -43,31 +38,28 @@ class UserFragment : Fragment() {
         view.text_repositories_list.setOnClickListener {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.main_layout, RepositoryFragment())
+            transaction.addToBackStack(null)
             transaction.commit()
 
-//            startActivity(repoIntent)
+
 
         }
 
         view.text_stars_list.setOnClickListener {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.main_layout, StarsFragment())
+            transaction.addToBackStack(null)
             transaction.commit()
-//            val starsIntent = Intent(this, StarsActivity::class.java)
-//            starsIntent.putExtra("id", UtilClass.getId(applicationContext))
-//
-//            startActivity(starsIntent)
+
 
         }
 
         view.text_followers_list.setOnClickListener {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.main_layout,FollowersFragment())
+            transaction.addToBackStack(null)
             transaction.commit()
-       //     val followersIntent = Intent(this, FollowersActivity::class.java)
-          //  followersIntent.putExtra("id", UtilClass.getId(requireActivity().applicationContext))
 
-          //  startActivity(followersIntent)
 
 
         }
@@ -75,11 +67,9 @@ class UserFragment : Fragment() {
         view.text_following_list.setOnClickListener {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
             transaction.replace(R.id.main_layout,FollowingFragment())
+            transaction.addToBackStack(null)
             transaction.commit()
-//            val followingIntent = Intent(this, FollowingActivity::class.java)
-//            followingIntent.putExtra("id", UtilClass.getId(requireActivity().applicationContext))
-//
-//            startActivity(followingIntent)
+
 
 
         }

@@ -14,11 +14,7 @@ import splitties.toast.toast
 
 class FirstRegisterFragment : Fragment() {
 
-    companion object{
-        fun newInstance(): Fragment {
-            return FirstRegisterFragment()
-        }
-    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,8 +37,7 @@ class FirstRegisterFragment : Fragment() {
         if(UtilClass.getId(requireActivity().applicationContext)!="default"){
             Log.d("dasf","asdfasd")
             val transaction =requireActivity().supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.main_layout,UserFragment.newInstance())
-            transaction.addToBackStack(null)
+            transaction.replace(R.id.main_layout,UserFragment())
             transaction.commit()
         }
 

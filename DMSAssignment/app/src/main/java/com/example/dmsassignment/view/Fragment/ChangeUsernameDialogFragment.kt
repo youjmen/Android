@@ -23,7 +23,7 @@ class ChangeUsernameDialogFragment : DialogFragment() {
                         UtilClass.changeId(requireActivity().applicationContext,getDialog()!!.change_username_editText.text.toString())
 
                         val transaction = requireActivity().supportFragmentManager.beginTransaction()
-                        transaction.replace(R.id.main_layout,UserFragment.newInstance())
+                        transaction.replace(R.id.main_layout,UserFragment())
                         transaction.addToBackStack(null)
 
                         transaction.commit()

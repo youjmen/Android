@@ -29,7 +29,6 @@ class RepositoryFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_repository, container, false)
 
         val repositoryAdapter= RepositoryAdapter(requireActivity(),list)
