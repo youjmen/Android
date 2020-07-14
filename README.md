@@ -1,2 +1,2 @@
-# Kotlin_Study
-안드로이드를 위한 코틀린 공부
+# Android
+공부하며 실제 Android에 적용하는 레포
