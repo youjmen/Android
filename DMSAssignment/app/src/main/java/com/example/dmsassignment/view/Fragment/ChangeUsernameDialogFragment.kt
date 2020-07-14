@@ -1,8 +1,7 @@
-package com.example.dmsassignment.view
+package com.example.dmsassignment.view.Fragment
 
 import android.app.Dialog
 import android.content.DialogInterface
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
@@ -22,9 +21,13 @@ class ChangeUsernameDialogFragment : DialogFragment() {
 
 
                         UtilClass.changeId(requireActivity().applicationContext,getDialog()!!.change_username_editText.text.toString())
-                        val intent = Intent(requireActivity(),UserActivity::class.java)
-                        startActivity(intent)
-                        requireActivity().finish()
+
+                        val transaction = requireActivity().supportFragmentManager.beginTransaction()
+                        transaction.replace(R.id.main_layout,UserFragment.newInstance())
+                        transaction.addToBackStack(null)
+
+                        transaction.commit()
+
 
 
 

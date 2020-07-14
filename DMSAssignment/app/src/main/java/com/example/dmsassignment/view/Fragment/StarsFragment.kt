@@ -1,32 +1,38 @@
-package com.example.dmsassignment.view
+package com.example.dmsassignment.view.Fragment
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dmsassignment.GithubApi
 import com.example.dmsassignment.R
-import com.example.dmsassignment.adapter.RepositoryAdapter
+import com.example.dmsassignment.UtilClass
 import com.example.dmsassignment.adapter.StarsAdapter
-import com.example.dmsassignment.data.RepositoryInfo
 import com.example.dmsassignment.data.StarsInfo
-import kotlinx.android.synthetic.main.activity_repository.*
-import kotlinx.android.synthetic.main.activity_stars.*
+import kotlinx.android.synthetic.main.fragment_stars.view.*
+
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class StarsActivity : AppCompatActivity() {
+
+class StarsFragment : Fragment() {
+
     var list = mutableListOf<StarsInfo>()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_stars)
-
-        val starsAdapter= StarsAdapter(this,list)
-        stars_recyclerview.layoutManager= LinearLayoutManager(this)
-        stars_recyclerview.adapter=starsAdapter
-        val call = GithubApi().service.getUserStarsInfo(intent.getStringExtra("id")!!.toString())
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        val view= inflater.inflate(R.layout.fragment_stars, container, false)
+        val starsAdapter= StarsAdapter(requireActivity(),list)
+        view.stars_recyclerview.layoutManager= LinearLayoutManager(requireActivity())
+        view.stars_recyclerview.adapter=starsAdapter
+        val call = GithubApi().service.getUserStarsInfo(UtilClass.getId(requireActivity().applicationContext))
         call.enqueue(object : Callback<List<StarsInfo>> {
             override fun onFailure(call: Call<List<StarsInfo>>, t: Throwable) {
                 t.printStackTrace()
@@ -51,5 +57,9 @@ class StarsActivity : AppCompatActivity() {
             }
 
         })
+
+        return view
     }
+
+
 }
