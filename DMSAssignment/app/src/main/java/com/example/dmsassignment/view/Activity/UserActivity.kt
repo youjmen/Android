@@ -1,22 +1,15 @@
 package com.example.dmsassignment.view
 
-import android.content.DialogInterface
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import androidx.appcompat.app.AlertDialog
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentTransaction
-import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.example.dmsassignment.GithubApi
 import com.example.dmsassignment.R
 import com.example.dmsassignment.UtilClass
 import com.example.dmsassignment.data.UserInfo
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.dmsassignment.view.Fragment.ChangeUsernameDialogFragment
 import kotlinx.android.synthetic.main.activity_user.*
 
 import retrofit2.Call
@@ -84,7 +77,8 @@ class UserActivity : FragmentActivity() {
 
     }
     fun showChangeUsernameDialog() {
-        val dialog = ChangeUsernameDialogFragment()
+        val dialog =
+            ChangeUsernameDialogFragment()
         dialog.show(supportFragmentManager, "ChangeUsernameDialogFragment")
     }
     fun loadInfo(call : Call<UserInfo>){
