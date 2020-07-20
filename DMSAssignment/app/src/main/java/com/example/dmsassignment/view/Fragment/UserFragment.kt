@@ -11,6 +11,7 @@ import com.example.dmsassignment.GithubApi
 import com.example.dmsassignment.R
 import com.example.dmsassignment.UtilClass
 import com.example.dmsassignment.data.UserInfo
+import io.reactivex.Single
 
 
 import kotlinx.android.synthetic.main.fragment_user.*
